@@ -4,10 +4,11 @@ INCLUDES += -I$(LOCAL_DIR)/include -I$(LK_TOP_DIR)/platform/msm_shared
 
 PLATFORM := msm8960
 
-MEMBASE := 0x88F00000 # SDRAM
+#MEMBASE := 0x88F00000 # SDRAMS
+MEMBASE := 0x80208000 #Move to kernel load ADDR
 MEMSIZE := 0x00100000 # 1MB
 
-BASE_ADDR        := 0x80200000
+BASE_ADDR        := 0x80300000 #Move kernel load ADDR out of the way of the LK
 
 TAGS_ADDR        := BASE_ADDR+0x00000100
 KERNEL_ADDR      := BASE_ADDR+0x00008000
